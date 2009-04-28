@@ -1,0 +1,104 @@
+body {
+    background: #fff;
+    color: black;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #c00;
+    background: white;
+}
+
+a:link:hover, a:visited:hover {
+    font-weight: bold;
+    color: #fff;
+    background: black;
+}
+
+h1 {
+    color: #666;
+    background: white;
+    text-align: right;
+    margin-top: 1em;
+}
+
+h2 {
+    color: #666;
+    background: #ddd;
+    margin-top: 3ex;
+}
+
+h2 span.content {
+    border-style: solid solid dashed solid;
+    border-width: 0px 0px 1px 20px;
+    border-color: #666;
+    padding-left: 1ex;
+}
+
+h3 {
+    color: #666;
+    background: #ddd;
+    margin-top: 2ex;
+}
+
+h3 span.content {
+    border-style: solid;
+    border-width: 0px 0px 0px 10px;
+    border-color: #999;
+    padding-left: 1ex;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 2ex;
+    margin-left: 1em;
+}
+
+ul {
+    margin-bottom: 0.5em;
+}
+
+li {
+    margin-bottom: 0.1em;
+}
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+    border-style: solid;
+    border-color: black;
+}
+
+table td {
+    border-style: solid;
+}
+
+address {
+    color: gray;
+    background: #fff;
+    text-align: right;
+    font-family: Times, serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+pre {
+    font-size: 90%;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #666;
+    padding-right: 1ex;
+    padding-top: 0.5em;
+    padding-left: 1ex;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 2em;
+    white-space: pre;
+    background: #e6e6e6;
+    color: black;
+}

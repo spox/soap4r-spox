@@ -1,0 +1,17 @@
+== soap4r ==
+
+    This is a modified version of the soap4r library for
+    the Ruby programming language. The official verion
+    can be found at:
+
+    http://dev.ctor.org/soap4r
+
+    This modified version simply allows soap4r to run on
+    Ruby 1.9. I have not done any extensive testing, merely
+    fixed things that I needed to work. If you find problems,
+    please drop me a line and I'll do an update to fix it.
+
+    Thanks!
+
+    spox
+    spox@modspox.com
