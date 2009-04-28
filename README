@@ -1,5 +1,13 @@
 == soap4r ==
 
+    IMPORTANT NOTE:
+        This has been heavily modified and I am still in
+        the process of testing it. I have been using the
+        wsdlDriver with great success. This version includes
+        my original patch, plus many other changes but I
+        have not tested the gem this produces yet. That
+        should be completed some time tomorrow.
+
     This is a modified version of the soap4r library for
     the Ruby programming language. The official verion
     can be found at:
