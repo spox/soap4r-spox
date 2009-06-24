@@ -25,12 +25,11 @@ class LibXMLParser < XSD::XMLParser::Parser
     end
     # XMLParser passes a String in utf-8.
     @charset = 'utf-8'
-    @parser = XML::SaxParser.new
+    @parser = XML::SaxParser.string(string)
     @parser.callbacks = self
-    @parser.string = string
     @parser.parse
   end
-
+  
   ENTITY_REF_MAP = {
     'lt' => '<',
     'gt' => '>',
