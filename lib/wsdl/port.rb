@@ -37,7 +37,6 @@ class Port < Info
   end
 
   def parse_element(element)
-          puts SOAPAddressName.inspect
     case element
     when SOAPAddressName
       o = WSDL::SOAP::Address.new
