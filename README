@@ -1,4 +1,7 @@
 == soap4r ==
+This is a fork of the soap4r project as imported to GitHub by spox.  
+Changes have been made to fix libxml support and have it work in Ruby 1.9.
+Still work todo in testing.
 
     IMPORTANT NOTE:
         This has been heavily modified and I am still in
