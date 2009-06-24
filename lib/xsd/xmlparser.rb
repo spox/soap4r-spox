@@ -56,7 +56,7 @@ loaded = false
   'xsd/xmlparser/libxmlparser',
   'xsd/xmlparser/xmlparser',
   'xsd/xmlparser/xmlscanner',
-  'xsd/xmlparser/rexmlparser',
+  'xsd/xmlparser/rexmlparser'
 ].each do |lib|
   begin
     require lib
