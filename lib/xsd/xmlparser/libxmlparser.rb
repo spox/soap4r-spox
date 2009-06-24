@@ -61,9 +61,14 @@ class LibXMLParser < XSD::XMLParser::Parser
   #def on_end_document()
   #  nil
   #end
-
-  def on_start_element(name, attr_hash)
-    start_element(name, attr_hash)
+  
+  def on_start_element_ns(name, attributes, prefix, uri, namespaces)
+    name = "#{prefix}:#{name}" unless prefix.nil?
+    namespaces.each do |key,value|
+      nsprefix = key.nil? ? "xmlns" : "xmlns:#{key}"
+      attributes[nsprefix] = value
+    end
+    start_element(name, attributes)
   end
 
   def on_end_element(name)
