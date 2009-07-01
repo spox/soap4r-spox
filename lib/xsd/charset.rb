@@ -128,29 +128,28 @@ public
   end
 
   # us_ascii = '[\x00-\x7F]'
-  us_ascii = "[\x9\xa\xd\x20-\x7F]"	# XML 1.0 restricted.
+  us_ascii = '[\x9\xa\xd\x20-\x7F]'	# XML 1.0 restricted.
   USASCIIRegexp = Regexp.new("\\A#{us_ascii}*\\z")
 
-  twobytes_euc = "(?:[\x8E\xA1-\xFE][\xA1-\xFE])"
-  threebytes_euc = "(?:\x8F[\xA1-\xFE][\xA1-\xFE])"
+  twobytes_euc = '(?:[\x8E\xA1-\xFE][\xA1-\xFE])'
+  threebytes_euc = '(?:\x8F[\xA1-\xFE][\xA1-\xFE])'
   character_euc = "(?:#{us_ascii}|#{twobytes_euc}|#{threebytes_euc})"
   EUCRegexp = Regexp.new("\\A#{character_euc}*\\z")
 
   # onebyte_sjis = '[\x00-\x7F\xA1-\xDF]'
-  onebyte_sjis = "[\x9\xa\xd\x20-\x7F\xA1-\xDF]"	# XML 1.0 restricted.
-  twobytes_sjis = "(?:[\x81-\x9F\xE0-\xFC][\x40-\x7E\x80-\xFC])"
+  onebyte_sjis = '[\x9\xa\xd\x20-\x7F\xA1-\xDF]'	# XML 1.0 restricted.
+  twobytes_sjis = '(?:[\x81-\x9F\xE0-\xFC][\x40-\x7E\x80-\xFC])'
   character_sjis = "(?:#{onebyte_sjis}|#{twobytes_sjis})"
   SJISRegexp = Regexp.new("\\A#{character_sjis}*\\z")
 
   # 0xxxxxxx
   # 110yyyyy 10xxxxxx
-  twobytes_utf8 = "(?:[\xC0-\xDF][\x80-\xBF])"
+  twobytes_utf8 = '(?:[\xC0-\xDF][\x80-\xBF])'
   # 1110zzzz 10yyyyyy 10xxxxxx
-  threebytes_utf8 = "(?:[\xE0-\xEF][\x80-\xBF][\x80-\xBF])"
+  threebytes_utf8 = '(?:[\xE0-\xEF][\x80-\xBF][\x80-\xBF])'
   # 11110uuu 10uuuzzz 10yyyyyy 10xxxxxx
-  fourbytes_utf8 = "(?:[\xF0-\xF7][\x80-\xBF][\x80-\xBF][\x80-\xBF])"
-  character_utf8 =
-    "(?:#{us_ascii}|#{twobytes_utf8}|#{threebytes_utf8}|#{fourbytes_utf8})"
+  fourbytes_utf8 = '(?:[\xF0-\xF7][\x80-\xBF][\x80-\xBF][\x80-\xBF])'
+  character_utf8 = "(?:#{us_ascii}|#{twobytes_utf8}|#{threebytes_utf8}|#{fourbytes_utf8})"
   UTF8Regexp = Regexp.new("\\A#{character_utf8}*\\z")
 
   def Charset.is_us_ascii(str)
