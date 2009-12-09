@@ -7,6 +7,7 @@
 
 
 require 'xsd/xmlparser/parser'
+require 'soap/property'
 
 
 module XSD
@@ -50,19 +51,23 @@ end
 end
 
 
+PARSER_LIBS = [
+  'libxmlparser',
+  'xmlparser',
+  'xmlscanner',
+  'rexmlparser'
+]
+# Get library prefs
+opt = ::SOAP::Property.loadproperty('soap/property')
+use_libxml = (opt and opt['parser'] and opt['parser']['use_libxml'] and opt['parser']['use_libxml'] == 'false') ? false : true
 # Try to load XML processor.
 loaded = false
-[
-  'xsd/xmlparser/libxmlparser',
-  'xsd/xmlparser/xmlparser',
-  'xsd/xmlparser/xmlscanner',
-  'xsd/xmlparser/rexmlparser'
-].each do |lib|
+PARSER_LIBS.each do |name|
   begin
-    require lib
+    lib = "xsd/xmlparser/#{name}"
+    require lib unless !use_libxml && name == 'libxmlparser'
     # XXX: for a workaround of rubygems' require inconsistency
     # XXX: MUST BE REMOVED IN THE FUTURE
-    name = lib.sub(/^.*\//, '')
     raise LoadError unless XSD::XMLParser.constants.find { |c|
       c.to_s.downcase == name.downcase
     }
@@ -74,3 +79,4 @@ end
 unless loaded
   raise RuntimeError.new("XML processor module not found.")
 end
+
