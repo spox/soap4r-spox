@@ -3,11 +3,11 @@
 
 require 'rubygems'
 SPEC = Gem::Specification.new do |s|
-  s.name = "mumboe-soap4r"
+  s.name = "spox-soap4r"
   s.version = "1.5.8.3"
   s.date = "2009-12-08"
-  s.author = "Scott Diedrick (modifier: swalterd)"
-  s.email = "swalterd@gmail.com"
+  s.author = "NAKAMURA, Hiroshi (modifier: lots)"
+  s.email = "nahi@ruby-lang.org"
   s.homepage = "http://dev.ctor.org/soap4r"
   s.platform = Gem::Platform::RUBY
   s.summary = "An implementation of SOAP 1.1 for Ruby."
