@@ -3,14 +3,6 @@ This is a fork of the soap4r project as imported to GitHub by spox.
 Changes have been made to fix libxml support and have it work in Ruby 1.9.
 Still work todo in testing.
 
-    IMPORTANT NOTE:
-        This has been heavily modified and I am still in
-        the process of testing it. I have been using the
-        wsdlDriver with great success. This version includes
-        my original patch, plus many other changes but I
-        have not tested the gem this produces yet. That
-        should be completed some time tomorrow.
-
     This is a modified version of the soap4r library for
     the Ruby programming language. The official verion
     can be found at:
