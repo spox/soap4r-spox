@@ -1,0 +1,34 @@
+== soap4r-spox
+
+This is a modified version of the soap4r library to work on Ruby versions
+>= 1.9. The official version can be found {here}[http://dev.ctor.org/soap4r].
+
+== Install
+
+There is no rubygem for this library. Simply grab the latest version from the
+{download}[http://github.com/spox/soap4r-spox/downloads] page, unpack it and run:
+
+  ruby setup.rb all
+
+That's it.
+
+There is still testing to be done. If you find any bugs, please let me know either
+by leaving a bug report, sending me a message to pull from your fixed fork,
+or drop me an email.
+
+=== Thanks
+
+A big thanks to everyone that has been helping squash 1.9 bugs in this library
+
+* {simcha}[http://github.com/simcha]
+* {swalterd}[http://github.com/swalterd]
+* {mumboe}[http://github.com/mumboe]
+* {xaviershay}[http://github.com/xaviershay]
+* {stopdropandrew}[http://github.com/stopdropandrew]
+* Counterspell
+
+==== Where to find me
+
+* Email: spox@modspox.com
+* Github messaging
+* IRC - Freenode and DALNet
