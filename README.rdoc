@@ -25,6 +25,7 @@ A big thanks to everyone that has been helping squash 1.9 bugs in this library
 * {mumboe}[http://github.com/mumboe]
 * {xaviershay}[http://github.com/xaviershay]
 * {stopdropandrew}[http://github.com/stopdropandrew]
+* {dlangevin}[http://github.com/dlangevin]
 * Counterspell
 
 ==== Where to find me
